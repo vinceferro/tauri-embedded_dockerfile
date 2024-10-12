@@ -1,7 +1,7 @@
 FROM rust:1-slim-bullseye
 
 RUN rustup target add armv7-unknown-linux-gnueabihf
-RUN cargo install tauri-cli
+RUN cargo install tauri-cli@^1
 
 RUN dpkg --add-architecture armhf
 RUN apt-get update && apt-get install -y git \
